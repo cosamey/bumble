@@ -1,25 +1,20 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "cosamey/bumble",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": [
-        "laravel",
-        "framework"
-    ],
+    "description": "Playful, opinionated starter kit for Laravel projects.",
+    "keywords": ["laravel"],
     "license": "MIT",
     "require": {
-        "php": "^8.2",
-        "laravel/framework": "^12.0",
+        "php": "^8.4",
+        "laravel/framework": "^12.25",
         "laravel/tinker": "^2.10.1"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.23",
-        "laravel/pail": "^1.2.2",
+        "fakerphp/faker": "^1.24.1",
         "laravel/pint": "^1.24",
-        "laravel/sail": "^1.41",
-        "mockery/mockery": "^1.6",
-        "nunomaduro/collision": "^8.6",
+        "mockery/mockery": "^1.6.12",
+        "nunomaduro/collision": "^8.8.2",
         "pestphp/pest": "^4.0",
         "pestphp/pest-plugin-laravel": "^4.0"
     },
@@ -28,7 +23,10 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files": [
+            "app/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
@@ -43,21 +41,15 @@
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ],
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        "check": [
+            "@format:check",
+            "@test"
         ],
-        "post-create-project-cmd": [
-            "@php artisan key:generate --ansi",
-            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
-            "@php artisan migrate --graceful --ansi"
-        ],
-        "dev": [
-            "Composer\\Config::disableProcessTimeout",
-            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite --kill-others"
-        ],
+        "format": "pint",
+        "format:check": "pint --test",
         "test": [
             "@php artisan config:clear --ansi",
-            "@php artisan test"
+            "@php artisan test --compact"
         ]
     },
     "extra": {
