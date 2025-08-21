@@ -23,6 +23,7 @@ class User extends Authenticatable
 {
     use CausesActivity;
     use Concerns\RecordsActivity;
+    use Concerns\TracksLastPresence;
 
     /** @use HasFactory<UserFactory> */
     use HasFactory;
