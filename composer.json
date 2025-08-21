@@ -48,8 +48,14 @@
             "@format:check",
             "@test"
         ],
-        "format": "pint",
-        "format:check": "pint --test",
+        "format": [
+            "bun run format",
+            "pint"
+        ],
+        "format:check": [
+            "bun run format:check",
+            "pint --test"
+        ],
         "test": [
             "@php artisan config:clear --ansi",
             "@php artisan test --compact"
