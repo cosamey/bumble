@@ -12,6 +12,7 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.24.1",
+        "larastan/larastan": "^3.6",
         "laravel/pint": "^1.24",
         "mockery/mockery": "^1.6.12",
         "nunomaduro/collision": "^8.8.2",
@@ -41,7 +42,9 @@
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ],
+        "analyse": "phpstan analyse --ansi",
         "check": [
+            "@analyse",
             "@format:check",
             "@test"
         ],
