@@ -8,6 +8,7 @@
     "require": {
         "php": "^8.4",
         "laravel/framework": "^12.25",
+        "laravel/nightwatch": "^1.13.1",
         "laravel/tinker": "^2.10.1",
         "league/flysystem-aws-s3-v3": "^3.29",
         "spatie/laravel-activitylog": "^4.10.2",
