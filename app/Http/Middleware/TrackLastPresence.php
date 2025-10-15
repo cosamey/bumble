@@ -15,7 +15,7 @@ class TrackLastPresence
         $user = $request->user();
 
         if ($user && in_array(TracksLastPresence::class, class_uses($user), true)) {
-            defer(function () use ($user): void {
+            \Illuminate\Support\defer(function () use ($user): void {
                 $user->markAsActive();
             });
         }
