@@ -10,14 +10,14 @@ use Illuminate\Support\Carbon;
 use Spatie\Activitylog\Traits\CausesActivity;
 
 /**
- * @property int $id
+ * @property-read int $id
  * @property string $name
  * @property string $email
  * @property ?Carbon $email_verified_at
  * @property string $password
  * @property ?string $remember_token
- * @property ?Carbon $created_at
- * @property ?Carbon $updated_at
+ * @property-read ?Carbon $created_at
+ * @property-read ?Carbon $updated_at
  */
 class User extends Authenticatable
 {
