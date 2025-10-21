@@ -32,8 +32,8 @@ class AppServiceProvider extends ServiceProvider
 
     private function configureDefaults(): void
     {
-        Number::useCurrency(config('app.currency'));
-        Number::useLocale(config('app.locale'));
+        Number::useCurrency(config()->string('app.currency'));
+        Number::useLocale(config()->string('app.locale'));
     }
 
     private function configureModels(): void
