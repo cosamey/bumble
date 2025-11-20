@@ -15,7 +15,8 @@ class GeneratePdf
             ->format(Format::A4)
             ->withBrowsershot(function (Browsershot $browsershot): void {
                 $browsershot->noSandbox()
-                    ->setOption('preferCSSPageSize', true);
+                    ->setOption('preferCSSPageSize', true)
+                    ->setOption('args', ['--disable-web-security']);
             })
             ->view($view, $data)
             ->base64();
