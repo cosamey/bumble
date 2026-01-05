@@ -18,12 +18,6 @@ return Application::configure(basePath: dirname(__DIR__))
         //
     })
     ->withSchedule(function (Schedule $schedule): void {
-        $schedule->command(\Spatie\Backup\Commands\CleanupCommand::class)
-            ->dailyAt('02:00')
-            ->environments('production');
-
-        $schedule->command(\Spatie\Backup\Commands\BackupCommand::class)
-            ->dailyAt('02:30')
-            ->environments('production');
+        //
     })
     ->create();
