@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
+use Mey\Spine\Concerns\TracksLastPresence;
 use Spatie\Activitylog\Traits\CausesActivity;
 
 /**
@@ -16,6 +17,8 @@ use Spatie\Activitylog\Traits\CausesActivity;
  * @property ?Carbon $email_verified_at
  * @property string $password
  * @property ?string $remember_token
+ * @property-read ?Carbon $last_active_at
+ * @property-read ?string $last_active_ip
  * @property-read ?Carbon $created_at
  * @property-read ?Carbon $updated_at
  */
@@ -23,12 +26,12 @@ class User extends Authenticatable
 {
     use CausesActivity;
     use Concerns\RecordsActivity;
-    use Concerns\TracksLastPresence;
 
     /** @use HasFactory<UserFactory> */
     use HasFactory;
 
     use Notifiable;
+    use TracksLastPresence;
 
     /** @var list<string> */
     protected $fillable = [

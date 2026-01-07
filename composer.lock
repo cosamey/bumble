@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cfb63a6b9a125ae8a3448eac98ca9fda",
+    "content-hash": "7d976ddbd4d2918276f29c5779c87e0b",
     "packages": [
         {
             "name": "brick/math",
@@ -211,6 +211,66 @@
                 }
             ],
             "time": "2025-08-20T19:15:30+00:00"
+        },
+        {
+            "name": "cosamey/spine",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cosamey/spine.git",
+                "reference": "3af5edf2e2f4c87b5819e81f7eba50c04e546817"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cosamey/spine/zipball/3af5edf2e2f4c87b5819e81f7eba50c04e546817",
+                "reference": "3af5edf2e2f4c87b5819e81f7eba50c04e546817",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.4",
+                "spatie/laravel-package-tools": "^1.92"
+            },
+            "require-dev": {
+                "larastan/larastan": "^3.8",
+                "laravel/pint": "^1.26",
+                "orchestra/testbench": "^10.8",
+                "pestphp/pest": "^4.3",
+                "pestphp/pest-plugin-laravel": "^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Spine": "Mey\\Spine\\Facades\\Spine"
+                    },
+                    "providers": [
+                        "Mey\\Spine\\SpineServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mey\\Spine\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Teyerl",
+                    "email": "chris.teyerl@cosamey.com"
+                }
+            ],
+            "description": "Pragmatic Laravel foundation package with sensible defaults and reusable conventions.",
+            "keywords": [
+                "laravel"
+            ],
+            "support": {
+                "source": "https://github.com/cosamey/spine/tree/v0.2.0"
+            },
+            "time": "2026-01-05T15:25:54+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
