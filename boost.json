@@ -1,13 +1,22 @@
 {
     "agents": [
-        "copilot"
+        "claude_code"
     ],
     "guidelines": true,
     "herd_mcp": false,
     "mcp": true,
+    "nightwatch_mcp": false,
+    "packages": [
+        "cosamey/spine",
+        "spatie/laravel-medialibrary",
+        "spatie/laravel-pdf"
+    ],
     "sail": false,
     "skills": [
         "pest-testing",
-        "tailwindcss-development"
+        "tailwindcss-development",
+        "mey-standards",
+        "medialibrary-development",
+        "laravel-pdf"
     ]
 }
