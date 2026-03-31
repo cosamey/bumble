@@ -3,8 +3,12 @@
 .env
 .env.backup
 .env.production
+.mcp.json
 .phpactor.json
 .phpunit.result.cache
+/.agents
+/.claude
+/.codex
 /.fleet
 /.idea
 /.nova
@@ -20,6 +24,9 @@
 /storage/pail
 /storage/temp
 /vendor
+AGENTS.md
+CLAUDE.md
 Homestead.json
 Homestead.yaml
+polyscope.json
 Thumbs.db

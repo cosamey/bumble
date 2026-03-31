@@ -3,8 +3,8 @@
 namespace App\Models\Concerns;
 
 use Illuminate\Database\Eloquent\Model;
-use Spatie\Activitylog\LogOptions;
-use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Activitylog\Models\Concerns\LogsActivity;
+use Spatie\Activitylog\Support\LogOptions;
 
 /** @mixin Model */
 trait RecordsActivity
@@ -16,6 +16,6 @@ trait RecordsActivity
         return LogOptions::defaults()
             ->logFillable()
             ->logOnlyDirty()
-            ->dontSubmitEmptyLogs();
+            ->dontLogEmptyChanges();
     }
 }

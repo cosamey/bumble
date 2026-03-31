@@ -10,7 +10,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
 use Mey\Spine\Concerns\TracksLastPresence;
-use Spatie\Activitylog\Traits\CausesActivity;
+use Spatie\Activitylog\Models\Concerns\CausesActivity;
 
 /**
  * @property-read int $id

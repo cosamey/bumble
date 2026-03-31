@@ -1,21 +1,25 @@
 {
     "agents": [
-        "claude_code"
+        "claude_code",
+        "codex"
     ],
     "guidelines": true,
-    "herd_mcp": false,
     "mcp": true,
     "nightwatch_mcp": false,
     "packages": [
         "cosamey/spine",
+        "spatie/laravel-activitylog",
         "spatie/laravel-medialibrary",
+        "laravel/nightwatch",
         "spatie/laravel-pdf"
     ],
     "sail": false,
     "skills": [
+        "laravel-best-practices",
         "pest-testing",
         "tailwindcss-development",
         "mey-standards",
+        "configure-nightwatch",
         "medialibrary-development",
         "laravel-pdf"
     ]
