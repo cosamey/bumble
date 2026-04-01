@@ -24,6 +24,7 @@
 /storage/pail
 /storage/temp
 /vendor
+_ide_helper.php
 AGENTS.md
 CLAUDE.md
 Homestead.json
