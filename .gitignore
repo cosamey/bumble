@@ -9,7 +9,7 @@
 /.agents
 /.claude
 /.codex
-/.fleet
+/.cursor
 /.idea
 /.nova
 /.phpunit.cache
