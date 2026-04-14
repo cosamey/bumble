@@ -10,16 +10,15 @@
         "cosamey/spine",
         "spatie/laravel-activitylog",
         "spatie/laravel-medialibrary",
-        "laravel/nightwatch",
         "spatie/laravel-pdf"
     ],
     "sail": false,
     "skills": [
         "laravel-best-practices",
+        "configure-nightwatch",
         "pest-testing",
         "tailwindcss-development",
         "mey-standards",
-        "configure-nightwatch",
         "medialibrary-development",
         "laravel-pdf"
     ]
