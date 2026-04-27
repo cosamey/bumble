@@ -10,7 +10,9 @@
         "cosamey/spine",
         "spatie/laravel-activitylog",
         "spatie/laravel-medialibrary",
-        "spatie/laravel-pdf"
+        "spatie/laravel-pdf",
+        "spatie/laravel-sluggable",
+        "spatie/laravel-translatable"
     ],
     "sail": false,
     "skills": [
@@ -20,6 +22,8 @@
         "tailwindcss-development",
         "mey-standards",
         "medialibrary-development",
-        "laravel-pdf"
+        "laravel-pdf",
+        "sluggable-development",
+        "translatable-development"
     ]
 }

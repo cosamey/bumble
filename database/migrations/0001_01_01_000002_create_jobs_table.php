@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('queue')->index();
             $table->longText('payload');
-            $table->tinyInteger('attempts')->unsigned();
+            $table->smallInteger('attempts')->unsigned();
             $table->integer('reserved_at')->unsigned()->nullable();
             $table->integer('available_at')->unsigned();
             $table->integer('created_at')->unsigned();
