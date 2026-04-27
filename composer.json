@@ -3,9 +3,7 @@
     "name": "cosamey/bumble",
     "type": "project",
     "description": "Playful, opinionated starter kit for Laravel projects.",
-    "keywords": [
-        "laravel"
-    ],
+    "keywords": ["laravel"],
     "license": "MIT",
     "require": {
         "php": "^8.5",
