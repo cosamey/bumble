@@ -3,6 +3,8 @@
     <head>
         @include('components.layouts.print.meta')
 
+        @fonts
+
         @vite(['resources/css/print.css'])
 
         @stack('head')

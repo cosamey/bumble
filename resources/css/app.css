@@ -1,9 +1,12 @@
 @import 'tailwindcss';
+@import './typography.css' layer(components);
 
 @source '../**/*';
 
 @theme {
     --color-black: #000000;
+
+    --font-inter: 'Inter', sans-serif;
 }
 
 @layer base {
@@ -12,6 +15,6 @@
     }
 
     body {
-        @apply text-base text-black antialiased;
+        @apply font-inter text-base text-black antialiased;
     }
 }

@@ -4,11 +4,13 @@
 
 @theme {
     --color-black: #000000;
+
+    --font-inter: 'Inter', sans-serif;
 }
 
 @layer base {
     body {
-        @apply m-px text-[12px]/normal text-black antialiased;
+        @apply m-px font-inter text-[12px]/normal text-black antialiased;
     }
 
     @page {
