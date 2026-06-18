@@ -5,11 +5,12 @@ namespace App\Actions\Browsershot;
 use Spatie\Browsershot\Browsershot;
 use Spatie\LaravelPdf\Enums\Format;
 use Spatie\LaravelPdf\Facades\Pdf;
+use Spatie\LaravelPdf\PdfBuilder;
 
 class GeneratePdf
 {
     /** @param array<string, mixed> $data */
-    public function execute(string $view, array $data): string
+    public function execute(string $view, array $data): PdfBuilder
     {
         return Pdf::portrait()
             ->format(Format::A4)
@@ -18,7 +19,6 @@ class GeneratePdf
                     ->setOption('preferCSSPageSize', true)
                     ->setOption('args', ['--disable-web-security']);
             })
-            ->view($view, $data)
-            ->base64();
+            ->view($view, $data);
     }
 }
