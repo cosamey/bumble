@@ -22,6 +22,7 @@
         {{ $slot }}
 
         @livewireScriptConfig
+        @fluxScripts
 
         @stack('footer')
     </body>

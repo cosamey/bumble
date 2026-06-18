@@ -1,7 +1,10 @@
 @import 'tailwindcss';
 @import './typography.css' layer(components);
+@import '../../vendor/livewire/flux/dist/flux.css';
 
 @source '../**/*';
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
     --color-black: #000000;
