@@ -17,4 +17,8 @@
     body {
         @apply font-inter text-base text-black antialiased;
     }
+
+    [x-cloak] {
+        @apply hidden!;
+    }
 }

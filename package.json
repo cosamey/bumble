@@ -9,7 +9,12 @@
         "format:check": "prettier --check resources/"
     },
     "devDependencies": {
+        "@alpinejs/collapse": "^3.15.12",
+        "@alpinejs/focus": "^3.15.12",
+        "@alpinejs/mask": "^3.15.12",
+        "@alpinejs/ui": "^3.15.12",
         "@tailwindcss/vite": "^4.3.1",
+        "alpinejs": "^3.15.12",
         "laravel-vite-plugin": "^3.1.0",
         "prettier": "^3.8.4",
         "prettier-plugin-blade": "^2.1.21",
