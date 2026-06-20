@@ -8,6 +8,6 @@ class HomeController
 {
     public function __invoke(): View
     {
-        return view('pages.home');
+        return view('pages.static.home');
     }
 }
