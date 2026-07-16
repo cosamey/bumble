@@ -5,6 +5,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 use Illuminate\Http\Request;
+use Spatie\Backup\Commands\BackupCommand;
+use Spatie\Backup\Commands\CleanupCommand;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -21,6 +23,12 @@ return Application::configure(basePath: dirname(__DIR__))
         );
     })
     ->withSchedule(function (Schedule $schedule): void {
-        //
+        $schedule->command(CleanupCommand::class)
+            ->dailyAt('02:00')
+            ->environments('production');
+
+        $schedule->command(BackupCommand::class)
+            ->dailyAt('02:30')
+            ->environments('production');
     })
     ->create();
