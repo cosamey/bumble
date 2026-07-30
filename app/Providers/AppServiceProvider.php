@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\Number;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Head\Enums\ImageType;
+use Laravel\Head\Enums\OgType;
+use Laravel\Head\Facades\Head;
+use Laravel\Head\HeadBuilder;
 use Mey\Spine\Support\ModelMorphMap;
 
 class AppServiceProvider extends ServiceProvider
@@ -34,6 +38,34 @@ class AppServiceProvider extends ServiceProvider
 
     private function configureDefaults(): void
     {
+        Head::defaults(function (HeadBuilder $head): void {
+            $head
+                ->title('Bumble', suffix: ' | Bumble')
+                ->canonical(forceHttps: app()->isProduction())
+                ->robots(app()->isProduction() ? 'index,follow' : 'noindex,nofollow')
+                ->viewport('width=device-width, initial-scale=1')
+                ->meta('author', 'Cosa Mey')
+                ->colorScheme('only light')
+                ->themeColor('#ffffff')
+                ->og(
+                    type: OgType::Website,
+                    siteName: 'Bumble',
+                    image: asset('assets/img/open-graph.jpg'),
+                    locale: app()->getLocale(),
+                )
+                ->icon(
+                    asset('assets/img/icons/icon-512.svg'),
+                    type: ImageType::Svg,
+                )
+                ->icon(
+                    asset('assets/img/icons/icon-32.png'),
+                    type: ImageType::Png,
+                    sizes: '32x32',
+                )
+                ->appleTouchIcon(asset('assets/img/icons/icon-180.png'))
+                ->manifest(asset('manifest.json'));
+        });
+
         Number::useCurrency(config()->string('app.currency', 'EUR'));
         Number::useLocale(config()->string('app.locale', 'en_US'));
     }

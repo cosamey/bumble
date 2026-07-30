@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        @include('components.layouts.app.meta')
-
-        @include('components.layouts.app.seo')
-
-        @include('components.layouts.app.links')
+        <meta charset="utf-8" />
 
         @include('components.layouts.app.scripts')
+
+        @head
 
         @fonts
 

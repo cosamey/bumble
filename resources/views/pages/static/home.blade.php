@@ -1,4 +1,4 @@
-<x-layouts.app title="{{ __('Home') }}">
+<x-layouts.app>
     <x-sections.common.header />
 
     <main></main>
