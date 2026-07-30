@@ -11,6 +11,7 @@
         "cosamey/spine",
         "spatie/laravel-activitylog",
         "spatie/laravel-medialibrary",
+        "spatie/laravel-backup",
         "spatie/laravel-pdf",
         "spatie/laravel-sluggable",
         "spatie/laravel-translatable"
@@ -29,6 +30,7 @@
         "cosamey-laravel",
         "cosamey-livewire",
         "cosamey-test",
+        "laravel-backup",
         "medialibrary-development",
         "laravel-pdf",
         "sluggable-development",
