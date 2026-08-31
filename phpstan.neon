@@ -4,9 +4,9 @@ includes:
 parameters:
     paths:
         - app
+        - bootstrap/app.php
         - config
-        - bootstrap
         - database
         - routes
 
-    level: 6
+    level: 7
