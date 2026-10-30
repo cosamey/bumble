@@ -31,6 +31,7 @@
         "cosamey-laravel",
         "cosamey-livewire",
         "cosamey-test",
+        "activitylog-development",
         "laravel-backup",
         "medialibrary-development",
         "laravel-pdf",
